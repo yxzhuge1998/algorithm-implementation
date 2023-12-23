@@ -37,6 +37,7 @@ if __name__ == '__main__':
     mu = [10, 30]
     sigma = [1, 2]
     alpha = [0.3, 0.7]
+    np.random.seed(1234)
     y = simulation(mu, sigma, alpha)
     mu_est, sigma_est, alpha_est = GMM_EM(y, 2)
     print(f"Estimation  mu: {mu_est} sigma: {sigma_est} alpha: {alpha_est}")
